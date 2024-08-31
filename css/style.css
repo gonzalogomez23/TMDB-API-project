@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Kanit:wght@300;400;700&display=swap');
 @import "fontello.css";
 
+:root{
+    --principal: rgb(8, 96, 90);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -13,7 +17,7 @@ li{
 
 body{
     font-family: 'Kanit', sans-serif;
-    background-color: rgba(0, 0, 0, 0.074);
+    background-color: rgb(227, 248, 236);
 }
 
 .app{
@@ -24,16 +28,28 @@ body{
     background-color: white;
 }
 
-.h1{
+.link-home{
+    text-decoration: none;
+}
+
+.main-title{
     margin-top: 1rem;
     font-size: 4em;
     text-align: center;
+    color: #083023;
+}
+
+.top-items{
+    display: flex;
+    /* background-color: aqua; */
+    justify-content: space-between;
 }
 
 .form{
     padding: 1rem;
     display: flex;
     justify-content: right;
+    /* background-color: blueviolet; */
 }
 
 .search{
@@ -54,6 +70,12 @@ body{
     outline: none;
 }
 
+.btn-search{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
 .genres-title{
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
     border-radius: 2rem;
@@ -64,6 +86,7 @@ body{
     width: fit-content;
     gap: 1rem;
     cursor: pointer;
+    /* background-color: chartreuse; */
     user-select: none; /* supported by Chrome and Opera */
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* Internet Explorer/Edge */
@@ -79,10 +102,10 @@ body{
 
 
 .genres__container{
-    margin: 2rem;
+    margin: 0rem 1rem 1rem 1rem;
     display: none;
     gap: 1rem;
-    justify-content: left;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -92,20 +115,28 @@ body{
 
 .genre__tag{
     padding: .5rem 1rem;
-    background-color: rgb(40, 187, 255);
+    border: 2px solid var(--principal);
+    color: var(--principal);
     border-radius: 3rem;
     cursor: pointer;
-    color: white;
+    transition: all .2s;
 }
 
 .genre__tag:hover{
-    background-color: rgb(107, 208, 255);
+    background-color: rgba(25, 128, 121, 0.231);
+    opacity: .7;
 }
 
-.highlight{
-    background-color: rgb(0, 129, 234);
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+.highlight, .highlight:hover{
+    background-color: var(--principal);
+    color: white;
+    border: 2px solid var(--principal);
+    transition: all .2s
 }
+
+/* .highlight:hover{
+    background-color: rgb(25, 128, 121);
+} */
 
 .movies-container{
     display: grid;
@@ -121,7 +152,7 @@ body{
 
 .movie{
     padding: .5rem;
-    background-color: #21262c;
+    background-color: #1c2a25;
     color: white;
 }
 
@@ -197,7 +228,7 @@ body{
     margin: .5rem 0;
     padding: .7rem 1rem;
     border: none;
-    background-color: #21262c;
+    background-color: #212c28;
     color: white;
     border-radius: 2rem;
     display: flex;
