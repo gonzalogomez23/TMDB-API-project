@@ -77,7 +77,7 @@ body{
 }
 
 .genres-title{
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid #cfe7df;
     border-radius: 2rem;
     padding: .5rem 1rem;
     margin: 1rem;
